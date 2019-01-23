@@ -1,7 +1,33 @@
 @import "@material/button/mdc-button";
 @import "@material/textfield/mdc-text-field";
+@import "@material/toolbar/mdc-toolbar";
+@import "@material/icon-button/mdc-icon-button";
+
+
 
 .foo-button {
   @include mdc-button-ink-color(teal);
   @include mdc-states(teal);
+}
+
+body{
+    text-align: center;
+    
+    .mdc-text-field{
+        display: block;
+        margin: 5vh auto;
+        margin-top: 1;
+        width: 50%;
+    }
+    .mdc-toolbar{
+        background-color: teal;
+        display: block;
+        margin: 5vh auto;
+        width: 50%;
+    
+    }
+    
+    
+
+
 }

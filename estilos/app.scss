@@ -1,8 +1,15 @@
 @import "@material/button/mdc-button";
+@import "@material/text-field/mdc-text-field";
 body {
-  color: blue;
+    color: blue;
+    text-align: center;
+    background-color: black;
 }
 .foo-button {
-  @include mdc-button-ink-color(teal);
-  @include mdc-states(teal);
+    @include mdc-button-ink-color(teal);
+    @include mdc-states(teal);
+}
+.mdc-text-field{
+    @include mdc-text-field-ink-color(teal);
+    @include mdc-states(teal);
 }

@@ -40,7 +40,9 @@
   },
   "dependencies": {
     "@material/form-field": "^0.43.0",
+    "@material/icon-button": "^0.43.0",
     "@material/textfield": "^0.43.1",
+    "@material/toolbar": "^0.43.0",
     "fibers": "^3.1.1"
   }
 }
