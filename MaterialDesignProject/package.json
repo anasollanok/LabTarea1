@@ -39,6 +39,8 @@
     "webpack-dev-server": "^2.11.3"
   },
   "dependencies": {
+    "@material/form-field": "^0.43.0",
+    "@material/textfield": "^0.43.1",
     "fibers": "^3.1.1"
   }
 }
