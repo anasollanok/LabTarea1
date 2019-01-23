@@ -2,6 +2,7 @@
 @import "@material/textfield/mdc-text-field";
 @import "@material/toolbar/mdc-toolbar";
 @import "@material/icon-button/mdc-icon-button";
+@import "@material/card/mdc-card";
 
 
 
@@ -13,20 +14,31 @@
 body{
     text-align: center;
     
-    .mdc-text-field{
+    background-color: lightblue;
+    
+    #container{
+        
+       background-color: white;
         display: block;
-        margin: 5vh auto;
-        margin-top: 1;
-        width: 50%;
+            margin: 5vh auto;
+            margin-top: 1;
+            width: 60%;
+    
+        .mdc-text-field{
+            display: block;
+            margin: 5vh auto;
+            margin-top: 1;
+            width: 70%;
+        }
+        
     }
     .mdc-toolbar{
-        background-color: teal;
-        display: block;
-        margin: 5vh auto;
-        width: 50%;
-    
-    }
-    
+            background-color: teal;
+            display: block;
+            margin: 5vh auto;
+            width: 100%;
+
+        }
     
 
 

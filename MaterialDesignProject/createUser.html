@@ -1,68 +1,81 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="estilos.css">
         <script src="aplicacion.js" async>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
+
+
 
         </script>
     </head>
 
     <body>
 
-        <header class="mdc-toolbar">
-  <div class="mdc-toolbar__row">
-    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-      
-      <span class="mdc-toolbar__title">Create User</span>
-    </section>
-  </div>
-</header>
-
-        <div class="mdc-text-field">
-            <input type="text" id="my-text-field" class="mdc-text-field__input">
-            <label class="mdc-floating-label" for="my-text-field">Name</label>
-            <div class="mdc-line-ripple"></div>
-        </div>
-
-
-        <div class="mdc-text-field">
-            <input type="text" id="my-text-field" class="mdc-text-field__input">
-            <label class="mdc-floating-label" for="my-text-field">Phone</label>
-            <div class="mdc-line-ripple"></div>
-        </div>
         
-        <div class="mdc-text-field">
-            <input type="text" id="my-text-field" class="mdc-text-field__input">
-            <label class="mdc-floating-label" for="my-text-field">Adress</label>
-            <div class="mdc-line-ripple"></div>
-        </div>
-        
-        <div class="mdc-text-field">
-            <input type="text" id="my-text-field" class="mdc-text-field__input">
-            <label class="mdc-floating-label" for="my-text-field">Email</label>
-            <div class="mdc-line-ripple"></div>
-        </div>
-        
-        <div class="mdc-text-field">
-            <input type="text" id="my-text-field" class="mdc-text-field__input">
-            <label class="mdc-floating-label" for="my-text-field">Password</label>
-            <div class="mdc-line-ripple"></div>
-        </div>
 
+        <div id="container" class="mdc-card">
+            
+            <header class="mdc-toolbar">
+            <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
 
-
-
-        <button class="foo-button mdc-button">
-            Create User
-        </button>
-        
-        <button class="mdc-icon-button material-icons">favorite</button>
-
-        
+                    <span class="mdc-toolbar__title">Create User</span>
+                </section>
+            </div>
+        </header>
+            
+            <div class="mdc-text-field mdc-text-field--with-trailing-icon">
+                <input type="text" id="my-input" class="mdc-text-field__input">
+                <label  class="mdc-floating-label">Name</label>
+                <button class="mdc-icon-button material-icons mdc-text-field__icon" tabindex="0">person</button>
+                <div class="mdc-line-ripple"></div>
+            </div>
      
-       
+
+            <div class="mdc-text-field mdc-text-field--with-trailing-icon">
+                <input type="text" id="my-input" class="mdc-text-field__input">
+                <label for="my-input" class="mdc-floating-label">Phone</label>
+                <button class="mdc-icon-button material-icons mdc-text-field__icon" tabindex="1">phone</button>
+                <div class="mdc-line-ripple"></div>
+            </div>
+
+             <div class="mdc-text-field mdc-text-field--with-trailing-icon">
+                <input type="text" id="my-input" class="mdc-text-field__input">
+                <label for="my-input" class="mdc-floating-label">Address</label>
+                <button class="mdc-icon-button material-icons mdc-text-field__icon" tabindex="0">location_on</button>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            
+             <div class="mdc-text-field mdc-text-field--with-trailing-icon">
+                <input type="text" id="my-input" class="mdc-text-field__input">
+                <label for="my-input" class="mdc-floating-label">Email</label>
+                <button class="mdc-icon-button material-icons mdc-text-field__icon" tabindex="0">email</button>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            
+            
+            <div class="mdc-text-field mdc-text-field--with-trailing-icon">
+                <input type="password" id="my-input" class="mdc-text-field__input">
+                <label for="my-input" class="mdc-floating-label">Password</label>
+                <button class="mdc-icon-button material-icons mdc-text-field__icon" tabindex="0">lock</button>
+                <div class="mdc-line-ripple"></div>
+            </div>
+
+
+
+
+            <button class="foo-button mdc-button">
+                Create User
+            </button>
+
+        
+
+        </div>
+
+
+
+
     </body>
 
 
