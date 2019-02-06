@@ -7,7 +7,7 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
-
+    
     //
     // ==================
     // Specify Test Files
@@ -61,7 +61,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error
-    logLevel: 'debug',
+    logLevel: 'info',
     //
     // Warns when a deprecated command is used
     deprecationWarnings: true,
@@ -103,8 +103,8 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['dot'],
-
+    reporters: ['dot','junit'],
+    
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -151,7 +151,7 @@ exports.config = {
      */
     // beforeCommand: function (commandName, args) {
     // },
-
+    
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
@@ -188,7 +188,7 @@ exports.config = {
      */
     // afterSuite: function (suite) {
     // },
-
+    
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {String} commandName hook command name
