@@ -5,12 +5,18 @@ describe('HTML tests', () => {
     it('Check that element exists', ()=>{
       browser.url('/');
 /*
-      var number = browser.findElements( By.id("username-input") ).size();
+      var number = driver.findElements( By.id("username-input") ).size();
       assert.equal(number, 0);
       */
-     var element = driver.findElements("id", "username-input" );
+     var user= $('#username-input');
+     var use2r= $('#username2-input');
+     console.log(user);
+     //var element = driver.findElements("id", "username-input" );
      //var element = driver.findElement(By.id("username-input"));
-     assert.notEqual(element , null);
+
+     // Revisa si existe el elemento.
+     assert.notEqual(user.ELEMENT , null);
+    // assert.notEqual(use2r.ELEMENT , null);
      /*
       var element = document.getElementById("username-input");
       assert.notEqual(element , null);
@@ -29,7 +35,7 @@ System.out.println("Image width Is "+ImageWidth+" pixels");
 int ImageHeight = Image.getSize().getHeight();        
 System.out.println("Image height Is "+ImageHeight+" pixels");
 */
-
+/*
 describe('Login page', () => {
     it('encontrar el titulo de la pagina', ()=>{
       browser.url('/');
@@ -55,6 +61,7 @@ describe('Login page', () => {
       }
       */
     
-  
+  /*
     });
   });
+*/
