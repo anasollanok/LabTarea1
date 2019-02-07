@@ -40,7 +40,7 @@ describe('HTML tests', () => {
         assert.equal(titulo, "Login");
     });
 
-    it('Should go somewhere when there is data in both text fields', ()=>{
+    /*it('Should go somewhere when there is data in both text fields', ()=>{
         browser.url('/');
 
         var user= $('#username-input');
@@ -53,16 +53,16 @@ describe('HTML tests', () => {
         var titulo = browser.getTitle();
         //browser.call(done);
         assert.notEqual(titulo, "Login");
-    });
+    });*/
 
-    /*it('Check button size', ()=>{
+    it('Check button size', ()=>{
         browser.url('/');
         console.log(browser);
         const button = $('#submitButton');
         var btnSize = button.getSize();
         console.log("image size isss"+btnSize);
         assert(btnSize.width > btnSize.height);
-    });*/
+    });
 });
 
 describe('CSS tests', () => {
