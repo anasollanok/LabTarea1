@@ -103,3 +103,19 @@ body{
     }
   }
 }
+
+  /*
+ smaller than or equal to 768 px (smartphones)
+larger than 768 px (small devices, tablets)
+larger than 992 px (medium devices)
+larger than 1200px (large devices)
+  */
+  @media screen and (max-width: 1200px) {   .lDESKTOP { display: none; } }
+ 
+  @media screen and (min-width: 1200px) {    .mDESKTOP { display: none; } }  
+  @media screen and (max-width: 992px) {    .mDESKTOP { display: none; } }
+  
+  @media screen and (min-width: 992px) {    .sTABLET { display: none; } } 
+  @media screen and (max-width: 768px) {    .sTABLET { display: none; } }
+   
+  @media screen and (min-width: 768px) {    .xsSMARTPHONE { display: none; } } 
