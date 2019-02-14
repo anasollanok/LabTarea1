@@ -2,8 +2,25 @@ var assert = require("assert");
 const {Builder, By, Key, until} = require('selenium-webdriver');
 
 describe('HTML tests', () => {
+
+    before(() => {
+        console.log("before triggered!");
+       // browser.windowHandleSize({width:1024,height:768});
+      //  const button = $('#submitButton');
+       // button.setAttribute('width', '10');
+      //  browser.setViewportSize({width: 820, height: 500});
+    }
+     );
+
     it('Check that username input element exists', ()=>{
+       // browser.windowHandleSize({width: 400, height: 768});
+      // browser.setViewportSize({width: 320, height: 500});
+      //driver.manage().window().setSize(400, 500); 
+
+    
         browser.url('/');
+        console.log("------ver esto-------");
+        console.log(browser);
         var user= $('#username-input');
         assert(user.ELEMENT != null || user.ELEMENT != 'undefined');
     });
@@ -59,6 +76,7 @@ describe('HTML tests', () => {
         browser.url('/');
         console.log(browser);
         const button = $('#submitButton');
+        button
         var btnSize = button.getSize();
         console.log("image size isss"+btnSize);
         assert(btnSize.width > btnSize.height);
