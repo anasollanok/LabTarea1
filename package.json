@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@material/checkbox": "^0.43.0",
+    "@material/drawer": "^0.44.0",
     "@material/form-field": "^0.43.0",
     "@material/icon-button": "^0.43.0",
     "@material/textfield": "^0.43.1",
@@ -53,7 +54,6 @@
     "@material/top-app-bar": "^0.43.0",
     "@material/typography": "^0.43.0",
     "@wdio/cli": "^5.4.9",
-    "fibers": "^3.1.1",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }
 }
