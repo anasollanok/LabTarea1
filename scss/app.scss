@@ -6,11 +6,14 @@
 @import "@material/checkbox/mdc-checkbox";
 @import "@material/typography/mdc-typography";
 
-$darker: #99ccff;
+$darker: #012169;
 $lighter: #e6f2ff;
 $gray: #626262;
 
 body{
+    .logo{
+        max-height: 100%;
+    }
     margin: 0 0 0 0;
     background-color: $lighter;
     text-align: center;
@@ -19,11 +22,25 @@ body{
       background-color: $darker;
       color: white;
     }
-    h5, label{
-      color: white;
-    }
+    
     h3{
-      color: $gray;
+      color: $darker;
+    }
+    
+   
+    .modulo1{
+        img{
+            max-width: 30%;
+        }
+        .foo-button{
+            background-color: $darker;
+        }
+       
+    }
+    .modulo2{
+        img{
+            max-width: 20%;
+        }
     }
 }
 
@@ -35,6 +52,9 @@ body{
   border: 3px solid white;
   border-radius: 25px;
   background-color: $darker;
+
+    
+
   .username, .password{
     display: block;
     margin-top: 6%;
@@ -111,11 +131,11 @@ larger than 992 px (medium devices)
 larger than 1200px (large devices)
   */
   @media screen and (max-width: 1200px) {   .lDESKTOP { display: none; } }
- 
+
   @media screen and (min-width: 1200px) {    .mDESKTOP { display: none; } }  
   @media screen and (max-width: 992px) {    .mDESKTOP { display: none; } }
-  
+
   @media screen and (min-width: 992px) {    .sTABLET { display: none; } } 
   @media screen and (max-width: 768px) {    .sTABLET { display: none; } }
-   
+
   @media screen and (min-width: 768px) {    .xsSMARTPHONE { display: none; } } 
