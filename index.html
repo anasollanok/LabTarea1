@@ -9,11 +9,6 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body class="mdc-typography">
-  <div class="lDESKTOP"> Large Desktop </div>
-  <div class="mDESKTOP"> Medium Desktop </div>
-  <div class="sTABLET"> Tablet </div>
-  <div class="xsSMARTPHONE"> Smartphone </div>
-
   <header class="mdc-top-app-bar mdc-top-app-bar--short">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar_section mdc-top-app-bar_section--align-start">
@@ -25,97 +20,116 @@
 
   <div class="modulo1">
     <h3 class="mdc-typography--headline3">Verifica tu botella</h3>
-    <div class="mdc-text-field mdc-text-field--with-trailing-icon username">
-      <input type="text" class="mdc-text-field__input" id="username-input" name="username" required>
-      <label class="mdc-floating-label" for="username-input">Número de serie</label>
+    <div class="mdc-text-field mdc-text-field--with-trailing-icon serial">
+      <input type="text" class="mdc-text-field__input" id="serial-input" name="serial" required>
+      <label class="mdc-floating-label" for="serial-input">Número de serie</label>
       <i class="material-icons mdc-text-field__icon" tabindex="0">verified_user</i>
       <div class="mdc-line-ripple"></div>
     </div>
-    <button id="submitButton" type="submit" class="foo-button mdc-button mdc-button--raised">
+    <button onclick="getModel()" id="button_verify" type="submit"
+      class="verify mdc-button mdc-button--raised">
         <span class="mdc-button__label">Verificar</span>
     </button>
-    <div id="bottle_info">
-      <ul class="mdc-image-list mdc-image-list--masonry">
-        <li class="mdc-image-list__item">
+      <ul id="bottle_info" class="mdc-image-list mdc-image-list--masonry">
+        <li id="one" class="mdc-image-list__item">
           <img class="mdc-image-list__image" src="assets/1.png"/>
-          <h4>Botella José Cuervo Tradicional</h4>
-          <h4>Tequila reposado</h4>
-          <p>
-            Esta botella pertenece a la categoría Tequila Reposado,
-            mide 32cm y la tapa es de color rojo.
-          </p>
+          <div class="info">
+            <h1>Botella José Cuervo Tradicional</h1>
+            <h2>Tequila reposado</h2>
+            <p>Contenido del Empaque 950 ml</p>
+            <p>Porcentaje de Alcohol 38%</p>
+            <p>Jose Cuervo Reposado celebra el legado de los primeros productores
+               de tequila haciendo historia desde 1795. Es considerado uno de
+               los mejores tequilas de México, este reposado pasa en promedio 6
+               meses en barricas de roble blanco, y tiene un aroma a agave cocido,
+               toques frutales y herbales, con notas de aceituna.
+             </p>
+          </div>
         </li>
-        <li class="mdc-image-list__item">
+        <li id="two" class="mdc-image-list__item">
           <img class="mdc-image-list__image" src="assets/2.png"/>
-          <h4>Botella José Cuervo Tradicional</h4>
-          <h4>Producción limitada</h4>
-          <p>
-            Esta botella pertenece a la categoría Tequila Reposado,
-            mide 32cm y la tapa es de color dorado.
-          </p>
+          <div class="info">
+            <h1>Botella José Cuervo Tradicional</h1>
+            <h2>Producción limitada</h2>
+            <p>Contenido del Empaque 695 ml</p>
+            <p>Porcentaje de Alcohol 38%</p>
+            <p>
+              En tiempos inmemoriales, los mayas y su cosmología entendían como
+              una sola, esta vida y la siguiente. Dos caminos entrelazados que no
+              pueden existir el uno sin el otro, como la naturaleza y la divinidad,
+              lo animal y lo humano. Para esta colaboración con Cuervo Tradicional®,
+              busqué inspiración en esta historia, uniendo diferentes elementos que
+              contrastan entre sí pero siempre conviviendo en armonía.
+            </p>
+          </div>
         </li>
-        <li class="mdc-image-list__item">
+        <li id="three" class="mdc-image-list__item">
           <img class="mdc-image-list__image" src="assets/3.png"/>
-          <h4>Botella José Cuervo Tradicional</h4>
-          <h4>Cristalino</h4>
-          <p>
-            Esta botella pertenece a la categoría Tequila Reposado,
-            mide 32cm y la tapa es de color bronce.
-          </p>
+          <div class="info">
+            <h1>Botella José Cuervo Tradicional</h1>
+            <h2>Cristalino</h2>
+            <p>Contenido del Empaque 950 ml</p>
+            <p>Porcentaje de Alcohol 25%</p>
+            <p>
+              José Cuervo Tradicional Cristalino es elaborado 100% de agave azul.
+              Un ensamble de tequila reposado y nuestro Reserva de la familia extra
+              añejo que crea un tequila de suavidad y fuerza excepcionales, con notas
+              frutales, de especias y maderas.
+            </p>
+          </div>
         </li>
       </ul>
-    </div>
   </div>
 
   <div class="modulo2">
     <h3 class="mdc-typography--headline3">En dónde comprar</h3>
-    <ul class="mdc-image-list mdc-image-list--masonry lugares">
+    <ul id="bottle_info" class="mdc-image-list mdc-image-list--masonry lugares">
       <li class="mdc-image-list__item">
         <img class="mdc-image-list__image" src="assets/1.png">
-        <h4>Tequila Jose Cuervo Tradicional reposado 950 ml</h4>
-        <div class="mdc-image-list__supporting">
-          <span class="mdc-image-list__label">
-            <a href="https://www.superama.com.mx/catalogo/d-vinos-y-licores/f-aperitivos/l-tequila/tequila-jose-cuervo-tradicional-reposado-950-ml/0750103501203">
+        <div class="info">
+          <h1>Tequila José Cuervo</h1>
+          <h1>Tradicional Reposado</h1>
+          <h2>950 ml</h2>
+          <a href="https://www.superama.com.mx/catalogo/d-vinos-y-licores/f-aperitivos/l-tequila/tequila-jose-cuervo-tradicional-reposado-950-ml/0750103501203">
               Superama
-            </a>
-            <p>$283.00</p>
-          </span>
+          </a>
+          <h2>$283.00</h2>
         </div>
       </li>
       <li class="mdc-image-list__item">
         <img class="mdc-image-list__image" src="assets/2.png">
-        <h4>Tequila Cuervo Tradicional P 695 ML</h4>
-        <div class="mdc-image-list__supporting">
-          <span class="mdc-image-list__label">
-            <a href="https://super.walmart.com.mx/licores/tequila-jose-cuervo-tradicional-cristalino-750-ml/00750103501235">
+        <div class="info">
+          <h1>Tequila José Cuervo</h1>
+          <h1>Tradicional Especial</h1>
+          <h2>695 ml</h2>
+          <a href="https://super.walmart.com.mx/licores/tequila-jose-cuervo-tradicional-cristalino-750-ml/00750103501235">
               Walmart
-            </a>
-            <p>$450.00</p>
-          </span>
+          </a>
+          <h2>$450.00</h2>
         </div>
       </li>
       <li class="mdc-image-list__item">
         <img class="mdc-image-list__image" src="assets/3.png">
-        <h4>Tequila Jose Cuervo Tradicional Cristalino 750 ml</h4>
-        <div class="mdc-image-list__supporting">
-          <span class="mdc-image-list__label">
-            <a href="https://www.bodegasalianza.com/tequila-cuervo-tradicional-plata-24363/p">
-              Bodegas Alianza
-            </a>
-            <p>$215.00</p>
-          </span>
+        <div class="info">
+          <h1>Tequila José Cuervo</h1>
+          <h1>Cristalino</h1>
+          <h2>750 ml</h2>
+          <a href="https://www.bodegasalianza.com/tequila-cuervo-tradicional-plata-24363/p">
+            Bodegas Alianza
+          </a>
+          <h2>$215.00</h2>
         </div>
       </li>
     </ul>
   </div>
 
   <div class="modulo3">
-    <h3 class="mdc-typography--headline3">Envía tus sugerencias</h3>
+    <h3 class="mdc-typography--headline3">Envíanos tus sugerencias</h3>
     <form action="#">
-      <div class="mdc-text-field mdc-text-field--with-trailing-icon email">
-        <input type="text" class="mdc-text-field__input" id="username-input" name="email" required>
-        <label class="mdc-floating-label" for="username-input">Email</label>
-        <i class="mdc-icon-button material-icons mdc-text-field__icon" tabindex="0">email</i>
+      <div class="mdc-text-field mdc-text-field--with-trailing-icon mail">
+        <input type="text" class="mdc-text-field__input" id="mail-input" name="mail" required>
+        <label class="mdc-floating-label" for="mail-input">Email</label>
+        <i class="material-icons mdc-text-field__icon" tabindex="0">email</i>
         <div class="mdc-line-ripple"></div>
       </div>
       <div class="mdc-text-field mdc-text-field--textarea mdc-text-field--no-label msg">
@@ -125,27 +139,41 @@
           <div class="mdc-notched-outline__trailing"></div>
         </div>
       </div>
-      <button id="submitButton" type="submit" class="foo-button mdc-button mdc-button--raised">
+      <button id="button_send" type="submit" class="send mdc-button mdc-button--raised">
         <span class="mdc-button__label">Enviar</span>
       </button>
     </form>
   </div>
 
   <div class="footer">
-    <h5>Tu device es</h5>
-    <div class="mdc-chip-set">
-      <div class="mdc-chip" tabindex="0">
+    <div class="chips mdc-chip-set">
+      <div class="desk mdc-chip" tabindex="0">
         <div class="mdc-chip__text">Desktop</div>
       </div>
-      <div class="mdc-chip" tabindex="0">
+      <div class="tab mdc-chip" tabindex="0">
         <div class="mdc-chip__text">Tablet</div>
       </div>
-      <div class="mdc-chip" tabindex="0">
+      <div class="mob mdc-chip" tabindex="0">
         <div class="mdc-chip__text">Mobile</div>
       </div>
     </div>
     <p>Ana Sollano, Bruno Schalch, Ángel Cueto</p>
   </div>
+
+  <script type="text/javascript">
+    function getModel() {
+      var rand = Math.floor((Math.random() * 3)+1);
+      if (rand === 1){
+        document.getElementById("one").style.display = "block";
+      }
+      else if (rand === 2) {
+        document.getElementById("two").style.display = "block";
+      }
+      else {
+        document.getElementById("three").style.display = "block";
+      }
+    }
+  </script>
   <script src="aplicacion.js" async></script>
 </body>
 </html>

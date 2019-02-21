@@ -3,7 +3,6 @@
 @import "@material/icon-button/mdc-icon-button";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/form-field/mdc-form-field";
-@import "@material/checkbox/mdc-checkbox";
 @import "@material/typography/mdc-typography";
 @import "@material/chips/mdc-chips";
 
@@ -12,109 +11,184 @@ $lighter: #e6f2ff;
 $gray: #626262;
 
 body{
-    .logo{
-        max-height: 100%;
-    }
     margin: 0 0 0 0;
     background-color: $lighter;
     text-align: center;
-    .mdc-top-app-bar{
-      position: static;
-      background-color: $darker;
-      color: white;
-    }
-    h3, h4, p{
+    h1, h2, h3, h4, p{
       color: $darker;
     }
     ul{
       list-style-type: none;
     }
-    .modulo1, .modulo2, .modulo3{
-      //display: none;
-    }
-    .modulo1{
-        img{
-            max-width: 30%;
-        }
-        .foo-button{
-            background-color: $darker;
-        }
-
-    }
-    .modulo2{
-        img{
-            max-width: 20%;
-        }
-    }
-    .modulo3{
-
+    p{
+      line-height: 2;
     }
 }
 
-#containerLogin{
-  .username, .password{
+a{
+  color: #3268a3;
+  text-decoration: none;
+  font-size: 1.8em;
+}
+
+.mdc-top-app-bar{
+  position: static;
+  background-color: $darker;
+  color: white;
+}
+
+.logo{
+    max-height: 100%;
+}
+
+.modulo1, .modulo2{
+  img{
+    max-width: 15%;
+  }
+  #bottle_info{
+    text-align: left;
+    margin-left: 10%;
+  }
+  .info{
+    width: 45%;
+    margin-top: 3%;
+    margin-left: 20%;
+    display: inline;
+    position: absolute;
+    text-align: justify;
+  }
+}
+
+.modulo1{
+  .serial{
     @include mdc-text-field-ink-color(black);
     @include mdc-text-field-label-color($gray);
     @include mdc-text-field-bottom-line-color($lighter);
-    @include mdc-text-field-line-ripple-color(white)
+    @include mdc-text-field-line-ripple-color($darker);
   }
-  .mdc-form-field{
-    @include mdc-text-field-focused-outline-color(black);
+  #one, #two, #three {
+    display: none;
   }
-  .foo-checkbox{
-    @include mdc-checkbox-container-colors(white,
-    $darker, white, $darker, white);
-    @include mdc-checkbox-ink-color(white);
-    @include mdc-checkbox-focus-indicator-color(white);
+  .info{
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 7%;
   }
-  .foo-button{
-    @include mdc-button-filled-accessible($lighter);
-    span{
-      color: $gray;
-    }
+  .verify{
+    margin-left: 3%;
+    background-color: $darker;
   }
 }
 
-#containerCreate{
-  .username, .phone, .address, .city, .state, .email, .name, .password{
+.modulo2{
+  #bottle_info{
+    margin-left: 10%;
+  }
+}
+
+.modulo3{
+  .mail, .msg{
     @include mdc-text-field-ink-color(black);
     @include mdc-text-field-label-color($gray);
     @include mdc-text-field-bottom-line-color($lighter);
-    @include mdc-text-field-line-ripple-color(white);
+    @include mdc-text-field-line-ripple-color($darker);
+    @include mdc-text-field-textarea-stroke-color($darker);
   }
-  .foo-button{
-    @include mdc-button-filled-accessible($darker);
-    span{
-      color: $gray;
-    }
+  .mail{
+    margin-left: 40%;
+    display: block;
+    width: 20%;
+  }
+  .msg{
+    margin-top: 1%;
+    width: 70%;
+  }
+  .send{
+    background-color: $darker;
+    display: block;
+    margin-left: 46%;
+    margin-top: 1.5%;
   }
 }
-/*
-  smaller than or equal to 768 px (smartphones)
-  larger than 768 px (small devices, tablets)
-  larger than 992 px (medium devices)
-  larger than 1200px (large devices)
-*/
-@media screen and (min-width: 992px) { // Desktop
+
+.footer{
+  .chips{
+    margin-top: 3%;
+    margin-left: 40%;
+  }
+}
+
+@media screen and (min-width: 960px) { // Desktop
   .modulo1, .modulo2, .modulo3 {
     display: block;
   }
+  .footer .desk{
+    @include mdc-chip-fill-color-accessible($darker);
+  }
 }
 
-@media screen and (min-width: 769px) and (max-width: 991px) { // Tablets
+@media screen and (min-width: 600px) and (max-width: 959px) { // Tablets
   .modulo3 {
     display: block;
+    form{
+      margin-top: 15%;
+    }
+    .mail{
+      margin-left: 32%;
+      width: 40%;
+    }
+    .msg{
+      margin-top: 5%;
+      width: 70%;
+    }
+    .send{
+      margin-top: 5%;
+    }
   }
   .modulo1, .modulo2 {
     display: none;
   }
+  .footer{
+    margin-top: 25%;
+    .tab{
+      @include mdc-chip-fill-color-accessible($darker);
+    }
+    .chips{
+      margin-left: 36.5%;
+    }
+  }
 }
 
-@media screen and (min-width: 100px) and (max-width: 768px) { // Mobile
+@media screen and (min-width: 600px) and (max-width: 780px) { // Smaller tablets
+  .footer .chips{
+    margin-left: 34%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 599px) { // Mobile
+  h1, h2, h3, h4, p, a{
+    font-size: 1em;
+  }
+  .footer .chips{
+    margin-left: 18%;
+  }
   .modulo2 {
     display: block;
+    .info{
+      margin-top: 18%;
+      margin-left: 10%;
+    }
+    img{
+      max-width: 30%;
+    }
+    #bottle_info{
+      margin-left: 0;
+    }
   }
   .modulo1, .modulo3 {
     display: none;
+  }
+  .mob{
+    @include mdc-chip-fill-color-accessible($darker);
   }
 }
