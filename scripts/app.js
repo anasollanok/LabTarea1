@@ -3,6 +3,7 @@ import {MDCTextField} from '@material/textfield';
 import {MDCTopAppBar} from '@material/top-app-bar/index';
 import {MDCFormField} from '@material/form-field';
 import {MDCCheckbox} from '@material/checkbox';
+import {MDCChipSet} from '@material/chips';
 
 const ripple = new MDCRipple(document.querySelector('.foo-button'));
 
@@ -26,3 +27,6 @@ iconButtonRipple.unbounded = true;
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
 const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+
+const chipSetEl = document.querySelector('.mdc-chip-set');
+const chipSet = new MDCChipSet(chipSetEl);

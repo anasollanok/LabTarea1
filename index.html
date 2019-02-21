@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body class="mdc-typography">
-  <div class="lDESKTOP"> LArge DEsktop! </div>
+  <div class="lDESKTOP"> Large Desktop </div>
   <div class="mDESKTOP"> Medium Desktop </div>
   <div class="sTABLET"> Tablet </div>
   <div class="xsSMARTPHONE"> Smartphone </div>
@@ -23,7 +23,7 @@
     </div>
   </header>
 
-  <div class="modulo1 lDESKTOP">
+  <div class="modulo1">
     <h3 class="mdc-typography--headline3">Verifica tu botella</h3>
     <div class="mdc-text-field mdc-text-field--with-trailing-icon username">
       <input type="text" class="mdc-text-field__input" id="username-input" name="username" required>
@@ -34,31 +34,30 @@
     <button id="submitButton" type="submit" class="foo-button mdc-button mdc-button--raised">
         <span class="mdc-button__label">Verificar</span>
     </button>
-
     <div id="bottle_info">
       <ul class="mdc-image-list mdc-image-list--masonry">
         <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="assets/1.png"/>
           <h4>Botella José Cuervo Tradicional</h4>
           <h4>Tequila reposado</h4>
-          <img class="mdc-image-list__image" src="assets/1.png"/>
           <p>
             Esta botella pertenece a la categoría Tequila Reposado,
             mide 32cm y la tapa es de color rojo.
           </p>
         </li>
         <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="assets/2.png"/>
           <h4>Botella José Cuervo Tradicional</h4>
           <h4>Producción limitada</h4>
-          <img class="mdc-image-list__image" src="assets/2.png"/>
           <p>
             Esta botella pertenece a la categoría Tequila Reposado,
             mide 32cm y la tapa es de color dorado.
           </p>
         </li>
         <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="assets/3.png"/>
           <h4>Botella José Cuervo Tradicional</h4>
           <h4>Cristalino</h4>
-          <img class="mdc-image-list__image" src="assets/3.png"/>
           <p>
             Esta botella pertenece a la categoría Tequila Reposado,
             mide 32cm y la tapa es de color bronce.
@@ -68,14 +67,12 @@
     </div>
   </div>
 
-
-
-  <div class="modulo2 mDESKTOP">
+  <div class="modulo2">
     <h3 class="mdc-typography--headline3">En dónde comprar</h3>
     <ul class="mdc-image-list mdc-image-list--masonry lugares">
       <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/1.png">
         <h4>Tequila Jose Cuervo Tradicional reposado 950 ml</h4>
-        <img class="mdc-image-list__image" src="assets/1.jpg">
         <div class="mdc-image-list__supporting">
           <span class="mdc-image-list__label">
             <a href="https://www.superama.com.mx/catalogo/d-vinos-y-licores/f-aperitivos/l-tequila/tequila-jose-cuervo-tradicional-reposado-950-ml/0750103501203">
@@ -86,8 +83,8 @@
         </div>
       </li>
       <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/2.png">
         <h4>Tequila Cuervo Tradicional P 695 ML</h4>
-        <img class="mdc-image-list__image" src="assets/2.jpg">
         <div class="mdc-image-list__supporting">
           <span class="mdc-image-list__label">
             <a href="https://super.walmart.com.mx/licores/tequila-jose-cuervo-tradicional-cristalino-750-ml/00750103501235">
@@ -98,8 +95,8 @@
         </div>
       </li>
       <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/3.png">
         <h4>Tequila Jose Cuervo Tradicional Cristalino 750 ml</h4>
-        <img class="mdc-image-list__image" src="assets/3.jpg">
         <div class="mdc-image-list__supporting">
           <span class="mdc-image-list__label">
             <a href="https://www.bodegasalianza.com/tequila-cuervo-tradicional-plata-24363/p">
@@ -112,7 +109,7 @@
     </ul>
   </div>
 
-  <div class="modulo3 sTABLET">
+  <div class="modulo3">
     <h3 class="mdc-typography--headline3">Envía tus sugerencias</h3>
     <form action="#">
       <div class="mdc-text-field mdc-text-field--with-trailing-icon email">
@@ -134,6 +131,21 @@
     </form>
   </div>
 
+  <div class="footer">
+    <h5>Tu device es</h5>
+    <div class="mdc-chip-set">
+      <div class="mdc-chip" tabindex="0">
+        <div class="mdc-chip__text">Desktop</div>
+      </div>
+      <div class="mdc-chip" tabindex="0">
+        <div class="mdc-chip__text">Tablet</div>
+      </div>
+      <div class="mdc-chip" tabindex="0">
+        <div class="mdc-chip__text">Mobile</div>
+      </div>
+    </div>
+    <p>Ana Sollano, Bruno Schalch, Ángel Cueto</p>
+  </div>
   <script src="aplicacion.js" async></script>
 </body>
 </html>
