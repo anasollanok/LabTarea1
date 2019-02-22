@@ -46,18 +46,55 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
+    capabilities: [
+    {
+      maxInstances: 5,
+      browserName: 'chrome',
+    },
+    {
         maxInstances: 5,
         browserName: 'chrome',
+        'goog:chromeOptions': {
+          "mobileEmulation": {
+            "deviceName": "iPad"
+          },
+        }
     },
+    /*{
+      maxInstances: 5,
+      browserName: 'chrome',
+      'goog:chromeOptions': {
+        "mobileEmulation": {
+          "deviceMetrics": {
+            "width": 360, "height": 640, "pixelRatio": 3.0
+          },
+          "userAgent": "Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19"
+        },
+      }
+    },*/
+    {
+      maxInstances: 5,
+      browserName: 'chrome',
+      'goog:chromeOptions': {
+        "mobileEmulation": {
+          "deviceName": "Pixel 2"
+        }
+      }
+    }/*,
+    {
+      maxInstances: 5,
+      browserName: 'firefox',
+        /*"moz:firefoxOptions": {
+              // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
+              args: ['-headless'],
+              'mobileEmulation': {
+              }
+          }*/
+    /*},
     {
         maxInstances: 5,
         browserName: 'safari',
-    },
-    {
-        maxInstances: 5,
-        browserName: 'firefox',
-    }
+    }*/
     ],
     //
     // ===================
