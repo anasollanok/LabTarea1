@@ -15,39 +15,21 @@ describe('Module 1', () => {
           if (deviceName == 'iPad' || deviceName == 'Pixel 2'){
             testDisplay = 'none';
           }
+          else if (capabilities['goog:chromeOptions'].mobileEmulation.deviceMetrics.width < 960){
+            testDisplay = 'none';
+          }
         }
         else{
           testDisplay = 'block';
         }
       }
-      assert.equal(display.value, testDisplay);
-
-
-      /*else if (capabilities.browserName === 'firefox') {
-        if (capabilities['goog:chromeOptions']){
-          const deviceName = capabilities['goog:chromeOptions'].mobileEmulation.deviceName;
-
-        }
-        else{
-          var module1 = $(".modulo1");
-          assert(module1.ELEMENT != null);
-        }
+      else if (capabilities.browserName === 'firefox'){
+        testDisplay = 'block';
       }
-      else {
-        if (capabilities['goog:chromeOptions']){
-          const deviceName = capabilities['goog:chromeOptions'].mobileEmulation.deviceName;
-          if (deviceName == 'iPhone X' || deviceName == 'Pixel 2'){
-
-          }
-          else {
-
-          }
-        }
-        else{
-          var module1 = $(".modulo1");
-          assert(module1.ELEMENT != 'undefined');
-        }
-      }*/
+      else if (capabilities.browserName === 'safari'){
+        testDisplay = 'none';
+      }
+      assert.equal(display.value, testDisplay);
   });
 });
 
@@ -68,40 +50,25 @@ describe('Module 2', () => {
           else if (deviceName == 'iPad') {
             testDisplay = 'none';
           }
+          else if (capabilities['goog:chromeOptions'].mobileEmulation.deviceMetrics.width < 600){
+            testDisplay = 'block';
+          }
+          else if (capabilities['goog:chromeOptions'].mobileEmulation.deviceMetrics.width < 960){
+            testDisplay = 'block';
+          }
         }
-        else{
+        else {
           testDisplay = 'block';
         }
       }
-      assert.equal(display.value, testDisplay);
-
-
-      /*else if (capabilities.browserName === 'firefox') {
-        if (capabilities['goog:chromeOptions']){
-          const deviceName = capabilities['goog:chromeOptions'].mobileEmulation.deviceName;
-
-        }
-        else{
-          var module1 = $(".modulo1");
-          assert(module1.ELEMENT != null);
-        }
+      else if (capabilities.browserName === 'firefox'){
+        testDisplay = 'block';
       }
-      else {
-        if (capabilities['goog:chromeOptions']){
-          const deviceName = capabilities['goog:chromeOptions'].mobileEmulation.deviceName;
-          if (deviceName == 'iPhone X' || deviceName == 'Pixel 2'){
-
-          }
-          else {
-
-          }
-        }
-        else{
-          var module1 = $(".modulo1");
-          assert(module1.ELEMENT != 'undefined');
-        }
-      }*/
-  });
+      else if (capabilities.browserName === 'safari'){
+        testDisplay = 'none';
+      }
+      assert.equal(display.value, testDisplay);
+    });
 });
 
 describe('Module 3', () => {
@@ -121,38 +88,20 @@ describe('Module 3', () => {
           else if (deviceName == 'iPad') {
             testDisplay = 'block';
           }
+          else if (capabilities['goog:chromeOptions'].mobileEmulation.deviceMetrics.width < 600){
+            testDisplay = 'none';
+          }
         }
-        else{
+        else {
           testDisplay = 'block';
         }
       }
-      assert.equal(display.value, testDisplay);
-
-
-      /*else if (capabilities.browserName === 'firefox') {
-        if (capabilities['goog:chromeOptions']){
-          const deviceName = capabilities['goog:chromeOptions'].mobileEmulation.deviceName;
-
-        }
-        else{
-          var module1 = $(".modulo1");
-          assert(module1.ELEMENT != null);
-        }
+      else if (capabilities.browserName === 'firefox'){
+        testDisplay = 'block';
       }
-      else {
-        if (capabilities['goog:chromeOptions']){
-          const deviceName = capabilities['goog:chromeOptions'].mobileEmulation.deviceName;
-          if (deviceName == 'iPhone X' || deviceName == 'Pixel 2'){
-
-          }
-          else {
-
-          }
-        }
-        else{
-          var module1 = $(".modulo1");
-          assert(module1.ELEMENT != 'undefined');
-        }
-      }*/
-  });
+      else if (capabilities.browserName === 'safari'){
+        testDisplay = 'block';
+      }
+      assert.equal(display.value, testDisplay);
+    });
 });
